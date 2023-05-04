@@ -42,8 +42,13 @@ function reset(){
 }
 
 function updateScreen(num){
-    displayNum += num;
-    screen.textContent = displayNum;
+    if(displayNum == 0 && num == 0){
+        return;
+    } else {
+        displayNum += num;
+        screen.textContent = displayNum;
+    }
+
 }
 
 function equals(){
