@@ -2,6 +2,7 @@ let num1;
 let num2;
 let operator = '';
 let displayNum = '';
+let operatorPressed = false;
 
 const screen = document.getElementById('screen');
 const numKeys = document.getElementsByClassName('number');
@@ -12,6 +13,7 @@ const equalKey = document.getElementById('equals');
 for (i of numKeys) {
     i.addEventListener('click', function() {
       updateScreen(this.textContent);
+      operatorPressed = false;
     });
   }
 
@@ -21,18 +23,25 @@ for (i of oppKeys) {
         num1 = parseInt(displayNum);
         operator = this.textContent;
         displayNum = '';
+        operatorPressed = true;
     } else {
-        equals();
-        num1 = parseInt(displayNum);
-        operator = this.textContent;
-        displayNum = '';
+        if(operatorPressed){
+            operator = this.textContent;
+        } else {
+            equals();
+            num1 = parseInt(displayNum);
+            operator = this.textContent;
+            displayNum = '';
+        }
     }});
   }
 
 clearKey.addEventListener('click', () => reset());
 equalKey.addEventListener('click', () => {
-    equals(); 
-    operator = ''
+    if(!operatorPressed){
+        equals(); 
+        operator = '';
+    }
 });
 
 function reset(){
