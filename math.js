@@ -97,7 +97,7 @@ function equals(){
         screen.textContent = 0;
         displayNum = '';
     }
-    if(num1 && operator != ''){
+    if(typeof num1 === 'number' && operator != ''){
         num2 = parseFloat(displayNum);
         displayNum = round(operate(num1, num2, operator));
         screen.textContent = displayNum;
