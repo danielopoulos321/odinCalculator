@@ -45,6 +45,10 @@
     background-color: #9F9F9F;
 }
 
+.number:hover{
+    background-color: #c3c3c3;
+}
+
 .opp, #equals{
     background-color: #FE9503;
     color: white;
@@ -80,6 +84,7 @@
 
 
 body{
+    width: 100%;
     background-color: black;
     display: flex;
     justify-content: center;
