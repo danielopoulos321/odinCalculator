@@ -34,6 +34,18 @@
     height: 90px;
     margin: 5px;
     border-radius: 100%;
+    border: none;
+    font-size: 35px;
+}
+
+.opp{
+    background-color: #FE9503;
+    color: white;
+}
+
+.opp:disabled{
+    background-color: white;
+    color: #FE9503;
 }
 
 
