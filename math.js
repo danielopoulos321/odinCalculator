@@ -76,7 +76,9 @@ decimalKey.addEventListener('click', () => {
 });
 deleteKey.addEventListener('click', () => {
     if(displayNum.length <= 1){
-        displayNum = '0';
+        displayNum = '';
+        screen.textContent = '0';
+        return;
     } else{
         displayNum = displayNum.slice(0,-1);
     }
