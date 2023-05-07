@@ -51,7 +51,7 @@ function reset(){
 }
 
 function updateScreen(num){
-    if(displayNum == 0 && num == 0){
+    if(this.textContent == 0 && num == 0){
         return;
     } else {
         displayNum += num;
@@ -66,6 +66,7 @@ function equals(){
         displayNum = operate(num1, num2, operator);
         screen.textContent = displayNum;
         num1 = parseInt(displayNum);
+        displayNum = '';
     }
 }
 
