@@ -41,6 +41,10 @@
     color: #F6F6F6;
 }
 
+.number:active{
+    background-color: #9F9F9F;
+}
+
 .opp, #equals{
     background-color: #FE9503;
     color: white;
@@ -51,12 +55,12 @@
     color: #FE9503;
 }
 
-#delete{
+/*#delete{
     background-image: url(backspace.png);
     background-repeat: no-repeat;
     background-position: center;
 
-}
+}*/
 
 #clear, #delete{
     background-color: #9F9F9F;
