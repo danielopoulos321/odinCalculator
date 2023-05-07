@@ -36,6 +36,8 @@
     border-radius: 100%;
     border: none;
     font-size: 35px;
+    background-color: #313131;
+    color: #F6F6F6;
 }
 
 .opp, #equals{
@@ -48,7 +50,17 @@
     color: #FE9503;
 }
 
+#delete{
+    background-image: url(backspace.png);
+    background-repeat: no-repeat;
+    background-position: center;
 
+}
+
+#clear, #delete{
+    background-color: #9F9F9F;
+    color: black;
+}
 #clear, #zero{
     width:190px;
     height: 90px;
