@@ -35,14 +35,14 @@
     margin: 5px;
     border-radius: 90px;
     border: none;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 100;
     background-color: #313131;
     color: #F6F6F6;
 }
 
 .number:active{
-    background-color: #9F9F9F;
+    background-color: #535353;
 }
 
 .number:hover{
@@ -63,7 +63,6 @@
     background-image: url(backspace.png);
     background-repeat: no-repeat;
     background-position: center;
-
 }*/
 
 #clear, #delete{
@@ -77,14 +76,8 @@
     border-radius: 90px;
 }
 
-#divide, #multiply{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 400;
-}
-
 
 body{
-    width: 100%;
     background-color: black;
     display: flex;
     justify-content: center;
