@@ -20,7 +20,7 @@ for (i of numKeys) {
 for (i of oppKeys) {
     i.addEventListener('click', function() {
     if (operator == ''){
-        num1 = parseInt(displayNum);
+        num1 = parseFloat(screen.textContent);
         operator = this.textContent;
         displayNum = '';
         operatorPressed = true;
@@ -29,7 +29,7 @@ for (i of oppKeys) {
             operator = this.textContent;
         } else {
             equals();
-            num1 = parseInt(displayNum);
+            num1 = parseFloat(screen.textContent);
             operator = this.textContent;
             displayNum = '';
         }
@@ -53,6 +53,8 @@ function reset(){
 function updateScreen(num){
     if(this.textContent == 0 && num == 0){
         return;
+    } else if(displayNum.length > 15){
+        screen.textContent = parseFloat(displayNum).toExponential(10);
     } else {
         displayNum += num;
         screen.textContent = displayNum;
@@ -62,10 +64,10 @@ function updateScreen(num){
 
 function equals(){
     if(num1 && operator != ''){
-        num2 = parseInt(displayNum);
-        displayNum = operate(num1, num2, operator);
+        num2 = parseFloat(displayNum);
+        displayNum = roundResult(operate(num1, num2, operator));
         screen.textContent = displayNum;
-        num1 = parseInt(displayNum);
+        num1 = parseFloat(displayNum);
         displayNum = '';
     }
 }
@@ -100,3 +102,7 @@ function operate(num1, num2, operator){
         return divide(num1, num2);
     }
 }
+
+function roundResult(num) {
+    return Math.round(num * 1000) / 1000
+  }
