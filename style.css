@@ -43,12 +43,8 @@
     color: #F6F6F6;
 }
 
-.opp:hover, #equals:hover{
-    background-color: white;
-    color: #FE9503;
-}
 
-.number:hover, #decimal:hover{
+.number:active, #decimal:active, #clear:active, #delete:active{
     background-color: #c3c3c3;
 }
 

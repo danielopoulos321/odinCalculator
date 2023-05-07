@@ -10,6 +10,7 @@ const clearKey = document.getElementById('clear');
 const oppKeys = document.getElementsByClassName('opp');
 const equalKey = document.getElementById('equals');
 const decimalKey = document.getElementById('decimal');
+const deleteKey = document.getElementById('delete');
 
 for (i of numKeys) {
     i.addEventListener('click', function() {
@@ -54,6 +55,7 @@ equalKey.addEventListener('click', () => {
     if(screen.textContent == '0.'){
         displayNum = 0;
         screen.textContent = displayNum;
+        operatorPressed = false;
     }
     if(!operatorPressed){
         equals(); 
@@ -72,6 +74,14 @@ decimalKey.addEventListener('click', () => {
         updateScreen('.');
     }
 });
+deleteKey.addEventListener('click', () => {
+    if(displayNum.length <= 1){
+        displayNum = '0';
+    } else{
+        displayNum = displayNum.slice(0,-1);
+    }
+    screen.textContent = displayNum;
+})
 
 function reset(){
     displayNum = '';
