@@ -41,11 +41,12 @@
     color: #F6F6F6;
 }
 
-.number:active{
-    background-color: #535353;
+.opp:hover, #equals:hover{
+    background-color: white;
+    color: #FE9503;
 }
 
-.number:hover{
+.number:hover, #decimal:hover{
     background-color: #c3c3c3;
 }
 
