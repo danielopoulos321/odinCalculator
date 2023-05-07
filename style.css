@@ -18,7 +18,8 @@
 
 #screen{
     margin: 10px;
-    font-size: 40px;
+    font-size: 65px;
+    font-weight: 300;
 }
 
 .button-container{

@@ -83,8 +83,8 @@ function reset(){
 function updateScreen(num){
     if(screen.textContent == 0 && num == 0){
         return;
-    } else if(displayNum.length > 15){
-        screen.textContent = parseFloat(displayNum).toExponential(10);
+    } else if(displayNum.length > 8){
+        screen.textContent = parseFloat(displayNum).toExponential(5);
     } else {
         displayNum += num;
         screen.textContent = displayNum;
@@ -118,7 +118,7 @@ function subtract(num1, num2){
 }
 
 function multiply(num1, num2){
-    return parseFloat(num1 * num2).toExponential(10);
+    return parseFloat(num1 * num2).toExponential(5);
 }
 
 function divide(num1, num2){
