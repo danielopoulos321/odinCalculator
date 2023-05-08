@@ -161,3 +161,86 @@ function enableOpps(){
         button.disabled = false;
     }
 }
+window.onkeydown = function(e){
+    let pressedKey = e.key;
+    let choice;
+    switch(pressedKey){
+        case '0':
+            choice = document.getElementById('zero');
+            choice.click();
+            break;
+        case '1':
+            choice = document.getElementById('1');
+            choice.click();
+            break;
+        case '2':
+            choice = document.getElementById('2');
+            choice.click();
+            break;
+        case '3':
+            choice = document.getElementById('3');
+            choice.click();
+            break;
+        case '4':
+            choice = document.getElementById('4');
+            choice.click();
+            break;
+        case '5':
+            choice = document.getElementById('5');
+            choice.click();
+            break;
+        case '6':
+            choice = document.getElementById('6');
+            choice.click();
+            break;
+        case '7':
+            choice = document.getElementById('7');
+            choice.click();
+            break;
+        case '8':
+            choice = document.getElementById('8');
+            choice.click();
+            break;
+        case '9':
+            choice = document.getElementById('9');
+            choice.click();
+            break;
+        case '.':
+            choice = document.getElementById('decimal');
+            choice.click();
+            break;
+        case '+':
+            choice = document.getElementById('+');
+            choice.click();
+            break;
+        case '-':
+            choice = document.getElementById('-');
+            choice.click();
+            break;
+        case '*':
+            choice = document.getElementById('multiply');
+            choice.click();
+            break;
+        case '/':
+            choice = document.getElementById('divide');
+            choice.click();
+            break;
+        case 'Enter':
+            e.preventDefault();
+            choice = document.getElementById('equals');
+            choice.click();
+            break;
+        case '=':
+            choice = document.getElementById('equals');
+            choice.click();
+            break;
+        case 'c':
+            choice = document.getElementById('clear');
+            choice.click();
+            break;
+        case 'Backspace':
+            choice = document.getElementById('delete');
+            choice.click();
+            break;
+    }
+}
