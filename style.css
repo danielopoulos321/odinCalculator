@@ -58,12 +58,6 @@
     color: #FE9503;
 }
 
-/*#delete{
-    background-image: url(backspace.png);
-    background-repeat: no-repeat;
-    background-position: center;
-}*/
-
 #clear, #delete{
     background-color: #9F9F9F;
     color: black;
