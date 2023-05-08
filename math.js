@@ -93,7 +93,7 @@ function reset(){
 }
 
 function updateScreen(num){
-    if(screen.textContent == 0 && num == 0){
+    if(screen.textContent == '0' && num == 0){
         return;
     } else if(displayNum.length > 8){
         screen.textContent = parseFloat(displayNum).toExponential(5);
